@@ -1,0 +1,10 @@
+<%= form_for(@micropost) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_area :content, placeholder: "やりたいこと..." %>
+  </div>
+  <div class="field">
+    <%= f.datetime_select :free_time, :start_year => 2017, :end_year => 2018, :minute_step => 10  %>
+  </div>  
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>
