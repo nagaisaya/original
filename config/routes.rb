@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  root to: 'static_pages#home'
+  get 'calendar/index'
+
+  get 'calendar/index'
+
+  root 'application#index'
+  get    'Timeline' , to: 'static_pages/home'
   get    'signup', to: 'users#new'
   get    'login' , to: 'sessions#new'
   post   'login' , to: 'sessions#create'
